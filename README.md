@@ -33,6 +33,7 @@ Outputs
 
  - `vpc_id` - VPC id
  - `vpc_cidr` - VPC CIDR block
+ - `vpc_default_security_group` - The ID of the security group created by default on VPC creation
 
 Authors
 =======
