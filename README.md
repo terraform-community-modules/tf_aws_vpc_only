@@ -13,6 +13,7 @@ Module Input Variables
 - `name` - Name (optional)
 - `enable_dns_support` - should be true if you want to use private DNS within the VPC (optional)
 - `enable_dns_hostnames` - should be true if you want to use private DNS within the VPC (optional)
+- `tags` - dictionary of tags that will be added to resources created by the module
 
 Usage
 -----
@@ -25,6 +26,11 @@ module "vpc" {
   cidr                 = "10.0.0.0/16"
   enable_dns_support   = true
   enable_dns_hostnames = true
+
+  tags {
+    "Terraform" = "true"
+    "Environment" = "${var.environment}"
+  }
 }
 ```
 
